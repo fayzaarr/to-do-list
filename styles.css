@@ -1,0 +1,174 @@
+body {
+    /* background-color: #666; */
+    background-image: url('../bg.jpg');
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+.todo-wrapper {
+    margin-top: 50px;
+    background-color: #202020;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    font-weight: 300;
+    border: 2px solid black;
+    font-family: "Lucida Grande";
+}
+
+.todo-wrapper h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b9b9b9;
+}
+
+.todo-wrapper p {
+    font-style: italic;
+    color: #b9b9b9;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-wrapper ol {
+    margin: 20px 0;
+}
+
+.todo-wrapper ol li {
+    margin: 5px 0;
+    padding: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.todo-wrapper ol li:nth-child(even) {
+    background: #ddd;
+}
+
+.todo-wrapper .completed {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.todo-wrapper .pretty-button {
+    margin: 10px 2px;
+    padding: 5px 20px;
+    border-radius: 15px;
+    /* border: 1px solid black; */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    font-size: small;
+    justify-content: center;
+}
+
+.todo-wrapper .pretty-button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.todo-wrapper input {
+    padding: 3px 6px;
+    /* border: 1px solid black; */
+    box-shadow: black;
+}
+
+.todo-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#control-wrapper {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-form {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;
+    margin-top: 10px;
+}
+
+#add-button, 
+#clear-completed-button {
+    margin: 0 10px;
+    background-color: #424242;
+}
+
+.todo-wrapper ol {
+    list-style-type: none; /* Remove default numbering */
+    padding: 0; /* Remove padding */
+    counter-reset: item;
+}
+
+.todo-wrapper ol li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #424242; /* Dark background */
+    color: #fff; /* White text for contrast */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #333; /* Optional: Border for better distinction */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex; /* Flex to align number and text */
+    align-items: center;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.todo-wrapper ol li:before {
+    content: counter(item) ". "; /* Custom counter for numbering */
+    counter-increment: item; /* Increments the custom counter */
+    margin-right: 10px; /* Adds spacing between number and text */
+    color: #ddd; /* Different color for the numbers */
+}
+
+.todo-wrapper ol li:nth-child(even) {
+    background-color: #555; /* Slightly lighter background for even items */
+}
+
+
+.todo-wrapper #empty-button {
+    background-color: #9B1C20;
+}
+
+.todo-wrapper #save-button {
+    background-color: #49B749;
+}
+
+@media only screen and (min-width: 1400px) {
+    .todo-wrapper {
+        width: 50%;
+    }
+
+    .todo-wrapper input {
+        width: 600px;
+    }
+    
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 750px) {
+    .todo-wrapper {
+        width: 75%;
+    }
+
+    .todo-wrapper input {
+        width: 400px;
+    }
+}
